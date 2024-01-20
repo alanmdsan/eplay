@@ -52,7 +52,6 @@ export const Infos = styled.div`
     margin: 16px 0;
 
     span {
-      display: block;
       text-decoration: line-through;
     }
   }
