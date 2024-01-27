@@ -7,8 +7,8 @@ import Card from '../../components/Card'
 
 import { Row, InputGroup, TabButton } from './styles'
 
-import boleto from '../../assets/images/boleto.png'
-import cartao from '../../assets/images/cartao.png'
+import barCode from '../../assets/images/barCode.png'
+import creditCard from '../../assets/images/creditCard.png'
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
@@ -249,14 +249,14 @@ const Checkout = () => {
                 isActive={!payWithCard}
                 onClick={() => setPayWithCard(false)}
               >
-                <img src={boleto} alt="Boleto" />
+                <img src={barCode} alt="Boleto bancário" />
                 Boleto bancário
               </TabButton>
               <TabButton
                 isActive={payWithCard}
                 onClick={() => setPayWithCard(true)}
               >
-                <img src={cartao} alt="Cartão" />
+                <img src={creditCard} alt="Cartão de crédito" />
                 Cartão de crédito
               </TabButton>
               <div className="margin-top">

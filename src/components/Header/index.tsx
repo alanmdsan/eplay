@@ -10,13 +10,13 @@ import {
   Links,
   LinkItem,
   CartButton,
-  Hamburguer,
+  Hamburger,
   HeaderRow,
   NavMobile
 } from './styles'
 
 import logo from '../../assets/images/logo.svg'
-import carrinho from '../../assets/images/carrinho.svg'
+import cart from '../../assets/images/cart.svg'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -31,11 +31,11 @@ const Header = () => {
     <HeaderBar>
       <HeaderRow>
         <div>
-          <Hamburguer onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <Hamburger onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <span />
             <span />
             <span />
-          </Hamburguer>
+          </Hamburger>
           <Link to="/">
             <img src={logo} alt="EPLAY" />
           </Link>
@@ -71,7 +71,7 @@ const Header = () => {
         <CartButton onClick={openCart}>
           {items.length}
           <span> - produto(s)</span>
-          <img src={carrinho} alt="Carrinho" />
+          <img src={cart} alt="Carrinho" />
         </CartButton>
       </HeaderRow>
       <NavMobile className={isMenuOpen ? 'is-open' : ''}>

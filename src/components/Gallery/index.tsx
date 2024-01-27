@@ -1,12 +1,11 @@
 import { useState } from 'react'
-
+import { Item, Items, Action, Modal, ModalContent } from './styles'
 import Section from '../Section'
 import { GalleryItem } from '../../pages/Home'
-import { Item, Items, Action, Modal, ModalContent } from './styles'
 
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
-import fechar from '../../assets/images/fechar.png'
+import close from '../../assets/images/close.png'
 
 type Props = {
   defaultCover: string
@@ -63,11 +62,11 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
           ))}
         </Items>
       </Section>
-      <Modal className={modal.isVisible ? 'visivel' : ''}>
+      <Modal className={modal.isVisible ? 'is-visible' : ''}>
         <ModalContent className="container">
           <header>
             <h4>{name}</h4>
-            <img src={fechar} alt="Ícone de fechar" onClick={closeModal} />
+            <img src={close} alt="Ícone de close" onClick={closeModal} />
           </header>
           {modal.type === 'image' ? (
             <img src={modal.url} alt="" />

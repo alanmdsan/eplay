@@ -83,7 +83,7 @@ export const CartButton = styled.a`
   }
 `
 
-export const Hamburguer = styled.div`
+export const Hamburger = styled.div`
   width: 32px;
 
   span {
