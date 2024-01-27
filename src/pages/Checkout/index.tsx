@@ -12,8 +12,7 @@ import cartao from '../../assets/images/cartao.png'
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
-  const [purchase, { isLoading, isError, data, isSuccess }] =
-    usePurchaseMutation()
+  const [purchase, { data, isSuccess }] = usePurchaseMutation()
 
   const requiredFieldMessage = 'O campo é obrigatório'
 
