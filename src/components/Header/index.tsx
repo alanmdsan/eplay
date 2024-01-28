@@ -70,7 +70,7 @@ const Header = () => {
         </div>
         <CartButton onClick={openCart}>
           {items.length}
-          <span> - produto(s)</span>
+          <span>&nbsp;-&nbsp;produto(s)</span>
           <img src={cart} alt="Carrinho" />
         </CartButton>
       </HeaderRow>
