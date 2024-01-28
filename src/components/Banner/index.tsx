@@ -2,6 +2,7 @@ import { parseToBrl } from '../../utils'
 import { Image, Title, Prices } from './styles'
 import Tag from '../Tag'
 import Button from '../Button'
+import Loader from '../Loader'
 
 import { useGetFeaturedGameQuery } from '../../services/api'
 
@@ -9,7 +10,7 @@ const Banner = () => {
   const { data: game } = useGetFeaturedGameQuery()
 
   if (!game) {
-    return <h3>Carregando...</h3>
+    return <Loader />
   }
 
   return (
